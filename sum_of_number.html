@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <title>Code Block Example</title>
+        
+    </head>
+    <body>
+        <h1>Code Block Example</h1>
+        <p>
+            This is way to show the code block.
+        </p>
+
+        <div class="container">
+            <input type="number" id="num1" placeholder="Enter num1"/>
+            <input type="number" id="num2" placeholder="Enter num2"/>
+            <button onclick ="calculateSum()">Add Number</button>
+            <br><br>
+            <div id="result"></div>
+        </div>
+        
+        
+        <script>
+            function calculateSum(){
+                const num1=parseFloat(document.getElementById("num1").value);
+                const num2=parseFloat(document.getElementById("num2").value);
+
+                if (!isNaN(num1) && !isNaN(num2)){
+                    const sum = num1+num2;
+                    document.getElementById("result").innerText="sum : " +sum;
+                }else{
+                    document.getElementById("result").innerText="Enter Valid Number";
+                }
+            }
+
+        </script>
+    </body>
+</html>
